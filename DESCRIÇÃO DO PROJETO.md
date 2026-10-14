@@ -36,6 +36,10 @@ A área administrativa possui uma tela de login. As páginas `gestao.html` e `es
 **Credencial demonstrativa:**
 - Usuário: `admin`
 - Senha: `admin123`
-- podendo alterar para o modelo de acesso como desejar 
 
 > Importante: essa autenticação é apenas para demonstração acadêmica no front-end. Em produção, as credenciais devem ser validadas por um backend e as senhas armazenadas de forma segura.
+
+
+## Interface visual
+
+A interface usa um tema escuro azul-marinho com painéis contrastantes e destaques azuis. A autenticação incluída é apenas demonstrativa e os dados permanecem no armazenamento local do navegador.
