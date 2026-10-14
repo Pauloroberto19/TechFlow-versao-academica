@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TechFlow - Gestão</title><link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="topbar">
+  <a class="brand compact" href="index.html"><div class="brand-icon">TF</div><div><strong>TechFlow</strong><span>Painel da Gestão</span></div></a>
+  <nav><a href="usuario.html">Novo chamado</a><a class="active" href="gestao.html">Gestão</a><a href="estoque.html">Estoque</a><button class="logout-btn" onclick="logoutAdmin()">Sair</button></nav>
+</header>
+<main class="page">
+  <div class="page-heading dashboard-heading">
+    <div><p class="eyebrow">SUPORTE DE TI</p><h1>Painel da Gestão</h1><p>Chamados recebidos e situação dos atendimentos.</p></div>
+    <div class="date-box"><span>ACESSO</span><b><i></i> Administrador</b></div>
+  </div>
+
+  <div class="stats">
+    <div class="stat"><span class="stat-icon blue">📋</span><div><small>Total de chamados</small><strong id="totalTickets">0</strong></div></div>
+    <div class="stat"><span class="stat-icon red">!</span><div><small>Alta prioridade</small><strong id="urgentTickets">0</strong></div></div>
+    <div class="stat"><span class="stat-icon green">✓</span><div><small>Resolvidos</small><strong id="resolvedTickets">0</strong></div></div>
+    <div class="stat"><span class="stat-icon orange">◷</span><div><small>Em atendimento</small><strong id="openTickets">0</strong></div></div>
+  </div>
+
+  <div class="dashboard-grid">
+    <section class="panel tickets-panel">
+      <div class="panel-header"><div><h2>Chamados recebidos</h2><p>Prioridade visual de verde a vermelho</p></div>
+        <select id="filterStatus" class="mini-select"><option value="todos">Todos</option><option value="aberto">Abertos</option><option value="andamento">Em atendimento</option><option value="resolvido">Resolvidos</option></select>
+      </div>
+      <div class="priority-legend"><span><i class="dot low"></i>Baixa</span><span><i class="dot medium"></i>Média</span><span><i class="dot high"></i>Alta</span><span><i class="dot critical"></i>Crítica</span></div>
+      <div id="ticketList" class="ticket-list"></div>
+    </section>
+    <aside class="side-column">
+      <section class="panel chart-panel">
+        <div class="panel-header"><div><h2>Movimentação</h2><p>Entradas x saídas</p></div><span class="chart-total" id="movementTotal">0</span></div>
+        <div class="chart"><div class="ylabels"><span>20</span><span>15</span><span>10</span><span>5</span><span>0</span></div><div class="bars" id="bars"></div></div>
+        <div class="chart-legend"><span><i class="legend-entry"></i>Entradas</span><span><i class="legend-exit"></i>Saídas</span></div>
+      </section>
+      <section class="panel quick-panel"><h2>Ações rápidas</h2><a href="usuario.html" class="quick-link">＋ Abrir chamado</a><a href="estoque.html" class="quick-link">📦 Gerenciar estoque</a><button class="quick-link danger" id="clearData">↺ Restaurar dados de demonstração</button></section>
+    </aside>
+  </div>
+</main>
+<script>if(sessionStorage.getItem("techflow_admin")!=="true"){location.replace("login.html");}</script>
+<script src="js/app.js"></script>
+</body></html>

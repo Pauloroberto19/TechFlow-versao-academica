@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TechFlow - Estoque</title><link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="topbar">
+  <a class="brand compact" href="index.html"><div class="brand-icon">TF</div><div><strong>TechFlow</strong><span>Controle de Estoque</span></div></a>
+  <nav><a href="usuario.html">Novo chamado</a><a href="gestao.html">Gestão</a><a class="active" href="estoque.html">Estoque</a><button class="logout-btn" onclick="logoutAdmin()">Sair</button></nav>
+</header>
+<main class="page">
+  <div class="page-heading"><div><p class="eyebrow">ESTOQUE DE TI</p><h1>Controle de Estoque</h1><p>Controle de equipamentos e materiais disponíveis.</p></div><button class="btn primary" id="openStockModal">＋ Movimentar estoque</button></div>
+  <div class="stats">
+    <div class="stat"><span class="stat-icon blue">📦</span><div><small>Itens cadastrados</small><strong id="stockTypes">0</strong></div></div>
+    <div class="stat"><span class="stat-icon green">↑</span><div><small>Unidades disponíveis</small><strong id="stockUnits">0</strong></div></div>
+    <div class="stat"><span class="stat-icon orange">↓</span><div><small>Saídas no período</small><strong id="stockOut">0</strong></div></div>
+    <div class="stat"><span class="stat-icon red">!</span><div><small>Estoque baixo</small><strong id="lowStock">0</strong></div></div>
+  </div>
+  <div class="stock-layout">
+    <section class="panel"><div class="panel-header"><div><h2>Itens em estoque</h2><p>Controle atual de quantidades</p></div><input id="stockSearch" class="search" placeholder="🔎 Buscar item..."></div>
+      <div class="table-wrap"><table><thead><tr><th>Item</th><th>Categoria</th><th>Quantidade</th><th>Localização</th><th>Status</th><th>Ações</th></tr></thead><tbody id="stockTable"></tbody></table></div>
+    </section>
+    <section class="panel history"><div class="panel-header"><div><h2>Histórico</h2><p>Últimas movimentações</p></div></div><div id="movementHistory"></div></section>
+  </div>
+</main>
+<div class="modal hidden" id="stockModal"><div class="modal-card"><button class="modal-close" id="closeStockModal">×</button><h2>Movimentar estoque</h2><p>Registre uma entrada ou saída.</p>
+<form id="stockForm"><label>Item<input id="stockItem" required placeholder="Ex.: Mouse USB"></label><label>Categoria<select id="stockCategory"><option>Periféricos</option><option>Informática</option><option>Cabos</option><option>Impressão</option><option>Outros</option></select></label><label>Tipo<select id="movementType"><option value="entrada">Entrada</option><option value="saida">Saída</option></select></label><label>Quantidade<input id="stockQty" type="number" min="1" required value="1"></label><label>Localização<input id="stockLocation" value="Almoxarifado"></label><button class="btn primary full" type="submit">Confirmar movimentação</button></form></div></div>
+<script>if(sessionStorage.getItem("techflow_admin")!=="true"){location.replace("login.html");}</script>
+<script src="js/app.js"></script>
+</body></html>

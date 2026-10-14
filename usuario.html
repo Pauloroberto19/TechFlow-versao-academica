@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TechFlow - Abrir Chamado</title><link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="topbar">
+  <a class="brand compact" href="index.html"><div class="brand-icon">TF</div><div><strong>TechFlow</strong><span>Portal do Usuário</span></div></a>
+  <nav><a class="active" href="usuario.html">Novo chamado</a><a href="login.html">Área administrativa 🔒</a></nav>
+</header>
+<main class="page">
+  <div class="page-heading"><div><p class="eyebrow">ATENDIMENTO DE TI</p><h1>Abra um chamado</h1><p>Preencha as informações abaixo para solicitar atendimento.</p></div></div>
+  <form id="ticketForm" class="form-layout">
+    <section class="panel">
+      <div class="section-title"><span class="step">1</span><div><h2>Identificação</h2><p>Quem está solicitando o atendimento?</p></div></div>
+      <div class="fields two">
+        <label>Nome do usuário<input id="nome" required placeholder="Ex.: João da Silva"></label>
+        <label>Setor / Departamento<input id="setor" required placeholder="Ex.: Financeiro"></label>
+        <label>E-mail corporativo<input id="email" type="email" required placeholder="usuario@empresa.com"></label>
+        <label>Ramal / contato<input id="contato" placeholder="Ex.: 2045"></label>
+      </div>
+    </section>
+
+    <section class="panel">
+      <div class="section-title"><span class="step">2</span><div><h2>Equipamento</h2><p>Selecione o equipamento que apresenta o problema.</p></div></div>
+      <div class="device-grid">
+        <label class="device-option"><input type="radio" name="equipamento" value="Impressora" required><span>🖨️</span><b>Impressora</b><small>Impressão, papel, conexão</small></label>
+        <label class="device-option"><input type="radio" name="equipamento" value="Notebook"><span>💻</span><b>Notebook</b><small>Lentidão, sistema, tela</small></label>
+        <label class="device-option"><input type="radio" name="equipamento" value="CPU"><span>🖥️</span><b>CPU / Desktop</b><small>Inicialização, hardware</small></label>
+        <label class="device-option"><input type="radio" name="equipamento" value="Monitor"><span>🖥️</span><b>Monitor</b><small>Imagem, cabo, energia</small></label>
+        <label class="device-option"><input type="radio" name="equipamento" value="Cabos / Rede"><span>🔌</span><b>Cabos / Rede</b><small>Internet, rede, conexão</small></label>
+        <label class="device-option"><input type="radio" name="equipamento" value="Periférico"><span>⌨️</span><b>Periférico</b><small>Mouse, teclado, headset</small></label>
+      </div>
+    </section>
+
+    <section class="panel">
+      <div class="section-title"><span class="step">3</span><div><h2>Problema</h2><p>Descreva o ocorrido para agilizar o atendimento.</p></div></div>
+      <div class="fields two">
+        <label>Tipo de problema
+          <select id="tipo" required>
+            <option value="">Selecione...</option>
+            <option>Equipamento não liga</option><option>Lentidão / travamento</option>
+            <option>Erro de sistema / aplicativo</option><option>Problema de impressão</option>
+            <option>Sem acesso à internet / rede</option><option>Falha de teclado ou mouse</option>
+            <option>Monitor sem imagem</option><option>Cabo / conexão danificada</option>
+            <option>Atualização / instalação de software</option><option>Outro</option>
+          </select>
+        </label>
+        <label>Nível de urgência
+          <select id="prioridade" required>
+            <option value="">Selecione...</option><option value="baixa">Baixa — pode aguardar</option>
+            <option value="media">Média — atrapalha o trabalho</option><option value="alta">Alta — trabalho parado</option>
+            <option value="critica">Crítica — impacto geral</option>
+          </select>
+        </label>
+      </div>
+      <label>Descrição detalhada<textarea id="descricao" required minlength="10" placeholder="Ex.: A impressora do setor Financeiro não imprime e apresenta uma mensagem de erro..."></textarea></label>
+    </section>
+    <div class="form-actions"><a class="btn secondary" href="index.html">Voltar</a><button class="btn primary" type="submit">Enviar chamado <span>→</span></button></div>
+  </form>
+</main>
+<script src="js/app.js"></script>
+</body></html>

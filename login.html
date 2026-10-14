@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TechFlow - Login Administrativo</title><link rel="stylesheet" href="css/style.css">
+</head>
+<body class="login-page">
+<div class="login-box">
+  <a class="brand login-brand" href="index.html"><div class="brand-icon">TF</div><div><strong>TechFlow</strong><span>Área Administrativa</span></div></a>
+  <div class="lock-icon">🔐</div>
+  <p class="eyebrow">ACESSO RESTRITO</p>
+  <h1>Login administrativo</h1>
+  <p class="login-subtitle">Somente o administrador pode acessar a Gestão e o Controle de Estoque.</p>
+  <form id="loginForm">
+    <label>Usuário<input id="adminUser" required autocomplete="username" placeholder="Digite seu usuário"></label>
+    <label>Senha<input id="adminPass" type="password" required autocomplete="current-password" placeholder="Digite sua senha"></label>
+    <div id="loginError" class="login-error hidden">Usuário ou senha incorretos.</div>
+    <button class="btn primary full" type="submit">Entrar no painel →</button>
+  </form>
+  <a class="back-link" href="index.html">← Voltar para o início</a>
+  <div class="demo-credentials"><b>Acesso de demonstração acadêmica</b><br>Usuário: <strong>admin</strong> • Senha: <strong>admin123</strong></div>
+</div>
+<script src="js/app.js"></script>
+</body>
+</html>
