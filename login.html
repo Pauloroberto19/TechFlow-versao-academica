@@ -4,59 +4,41 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>TechFlow - Login Administrativo</title>
+  <title>TechFlow ADS - Acesso</title>
   <link rel="stylesheet" href="css/style.css">
-  <link rel="icon" type="image/png" href="img/logo.png">
 </head>
 
-<body class="login-page">
-  <main class="login-box">
-    <section class="login-visual">
-      <a class="brand" href="index.html">
-        <img src="img/logo.png" alt="Logo TechFlow" class="logo">
-        <div>
-          <strong>Tech<span style="color:#35a5ff">Flow</span></strong>
-          <span>Sistema de Chamados e Estoque</span>
-        </div>
+<body class="landing">
+  <main class="landing-card">
+    
+<div class="brand">
+  <img src="img/logo.png" alt="Logo TechFlow" class="logo">
+  <div>
+    <strong>Tech<span style="color:#35a5ff">Flow</span></strong>
+    <span>Sistema de Chamados e Estoque</span>
+  </div>
+</div>
+
+    <p class="eyebrow">PROJETO ACADÊMICO • ADS</p>
+    <h1>Chamados Técnicos<br><span>& Controle de Estoque</span></h1>
+    <p>Uma área para registrar solicitações de suporte e outra para organizar o atendimento e as movimentações de
+      equipamentos.</p>
+    <div class="portal-grid">
+      <a href="usuario.html" class="portal-card">
+        <div class="portal-icon">👤</div>
+        <h2>Portal do Usuário</h2>
+        <p>Abra uma solicitação de suporte técnico informando o equipamento e o problema.</p><span>Acessar portal
+          →</span>
       </a>
-      <h2>Chamados Técnicos e<br><span>Controle de Estoque</span></h2>
-      <p>Sistema interno para organizar solicitações de suporte e acompanhar equipamentos de TI.</p>
-      <div class="login-features">
-        <div class="login-feature">
-          <div class="feature-icon">⌘</div>
-          <div><b>Suporte técnico</b><small>Registro e acompanhamento de chamados.</small></div>
-        </div>
-        <div class="login-feature">
-          <div class="feature-icon">▣</div>
-          <div><b>Controle de estoque</b><small>Entradas, saídas e consulta de itens.</small></div>
-        </div>
-        <div class="login-feature">
-          <div class="feature-icon">✓</div>
-          <div><b>Mais organização</b><small>Prioridades e status em um só lugar.</small></div>
-        </div>
-      </div>
-    </section>
-    <section class="login-form-side">
-      <div class="login-form-card">
-        <div class="lock-icon">🔒</div>
-        <p class="eyebrow">ACESSO RESTRITO</p>
-        <h1>Login Administrativo</h1>
-        <p class="login-subtitle">Informe suas credenciais para acessar o sistema.</p>
-        <form id="loginForm">
-          <label>Usuário<input id="adminUser" required autocomplete="username" placeholder="Digite seu usuário"></label>
-          <label>Senha<input id="adminPass" type="password" required autocomplete="current-password"
-              placeholder="Digite sua senha"></label>
-          <div id="loginError" class="login-error hidden">Usuário ou senha incorretos.</div>
-          <button class="btn primary full" type="submit">Entrar　→</button>
-        </form>
-        <div class="demo-credentials"><b>Credenciais de demonstração</b>Usuário: <strong>admin</strong><br>Senha:
-          <strong>admin123</strong><br><small>Uso acadêmico; autenticação apenas demonstrativa.</small>
-        </div>
-        <a class="back-link" href="index.html">← Voltar para o início</a>
-      </div>
-    </section>
+      <a href="login.html" class="portal-card admin-card">
+        <div class="portal-icon">🔐</div>
+        <h2>Área Administrativa</h2>
+        <p>Consulte chamados, atualize status e controle entradas e saídas do estoque.</p><span>Login administrativo
+          →</span>
+      </a>
+    </div>
+    <footer>TechFlow ADS • Protótipo acadêmico de suporte interno</footer>
   </main>
-  <script src="js/app.js"></script>
 </body>
 
 </html>
